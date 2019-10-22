@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-image: images/01.jpg
+image: images/cowes_week.jpg
 ---
 
 Hi, my name is Tom Dalton
