@@ -1,0 +1,20 @@
+I"�<p>I have created this site using Jekyll which is a static site generator that syncs well with Github.  A static site generator creates webpages by combining ‘content’ and ‘themes’ to produce website files that can be uploaded to a server.  This allows the user to be able to easily produce new content and allow the styling to be managed by your chosen theme.  I selected the Reked theme for Jekyll created by <a href="http://artemsheludko.com/">Artem Sheludko</a>.</p>
+
+<p><img src="/images/artemshelduko.png" alt="Artem Shelduko Home Page" />
+<em>Site contains links to several free and premium themes</em></p>
+
+<p>I also found the following resources very useful</p>
+<ol>
+  <li><a href="https://jekyll-themes.com/">Jeckyl-Themes.com</a> for browsing through different themes</li>
+  <li><a href="https://www.youtube.com/watch?v=bDQsGdCWv4I">Giraffe Academy</a> for getting up and running with Jekyll in the first place</li>
+  <li>And of course the official documentation on the Jekyll pages</li>
+</ol>
+
+<p>Since this is my first post, and I am experimenting, here is a quote:</p>
+
+<blockquote>
+  <p>A committe is an animal with four back legs</p>
+
+  <p><cite>John Le Carre</cite></p>
+</blockquote>
+:ET
