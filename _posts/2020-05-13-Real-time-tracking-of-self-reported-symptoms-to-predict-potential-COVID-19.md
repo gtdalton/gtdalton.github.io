@@ -1,33 +1,30 @@
 ---
 layout: post
-title:  In my experience, there is no such thing as luck
-date:   2018-11-05
-image:  images/10.jpg
-tags:   [Work]
+title:  Real-time tracking of self-reported symptoms to predict potential COVID-19
+date:   2020-05-13
+image:  
+tags:   [Logistic Regression]
 ---
-Still, she's got a lot of spirit. I don't know, what do you think? Hokey religions and ancient weapons are no match for a good blaster at your side, kid. I can't get involved! I've got work to do! It's not that I like the Empire, I hate it, but there's nothing I can do about it right now. It's such a long way from here.
+I have been self-reporting symptoms using the COVID Symptom Study App from King's College London, so I was interested to see Tim Spector post on Twitter about a new study in Nature using machine learning to create a model combining symptoms to make predictions about probable infection.
 
-I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. You are a part of the Rebel Alliance and a traitor! Take her away! Your eyes can deceive you. Don't trust them.
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Could you predict <a href="https://twitter.com/hashtag/COVID19?src=hash&amp;ref_src=twsrc%5Etfw">#COVID19</a> likelihood without a test? The team <a href="https://twitter.com/Join_ZOE?ref_src=twsrc%5Etfw">@Join_ZOE</a> are innovating with <a href="https://twitter.com/hashtag/MachineLearning?src=hash&amp;ref_src=twsrc%5Etfw">#MachineLearning</a> so that we might be able to: <a href="https://t.co/wvykOsIofi">https://t.co/wvykOsIofi</a> <a href="https://twitter.com/KingsCollegeLon?ref_src=twsrc%5Etfw">@KingsCollegeLon</a> <a href="https://twitter.com/TwinsUKres?ref_src=twsrc%5Etfw">@TwinsUKres</a> <a href="https://twitter.com/GlobalHealthMGH?ref_src=twsrc%5Etfw">@GlobalHealthMGH</a> <a href="https://twitter.com/MassGeneralNews?ref_src=twsrc%5Etfw">@MassGeneralNews</a> <a href="https://twitter.com/AndyChanMD?ref_src=twsrc%5Etfw">@AndyChanMD</a> <a href="https://twitter.com/Join_ZOE?ref_src=twsrc%5Etfw">@Join_ZOE</a> <a href="https://t.co/SiFIwL9lfe">pic.twitter.com/SiFIwL9lfe</a></p>&mdash; tim spector (@timspector) <a href="https://twitter.com/timspector/status/1259789366496542721?ref_src=twsrc%5Etfw">May 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Hokey religions and ancient weapons are no match for a good blaster at your side, kid. I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force.
+Anosmia. Matches previous reports
 
-![Bike on the street]({{site.baseurl}}/images/11.jpg)
-*Memories from childhood*
+Variables
+including symptoms, hospitalization,  demographic information and pre-existing medical conditions.
 
-1. She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time!
-2. Remember, a Jedi can feel the Force flowing through him.
-3. I want to come with you to Alderaan. There's nothing for me here now. I want to learn the ways of the Force and be a Jedi, like my father before me.
+Labels
+reverse-transcription PCR (RT-PCR) test outcomes,
 
-Obi-Wan is here. The Force is with him. Partially, but it also obeys your commands. I call it luck. I'm trying not to, kid. Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is.
+2,450,569 participants
+18,401 had undergone a SARS-CoV-2 test (15,638 UK and 2,763 US participants)
+39% positive test
 
-Hey, Luke! May the Force be with you. What?! Partially, but it also obeys your commands. Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force.
+Methods
+80:20 train test split in UK cohort
+Logistic regression model
+5,638 UK and 2,763 US participants
+Prediction model = −1.32 − (0.01 × age) + (0.44 × sex) + (1.75 × loss of smell and taste) + (0.31 × severe or significant persistent cough) + (0.49 × severe fatigue) + (0.39 × skipped meals)
 
-> The longer I live, the more I realize that I am never wrong about anything, and that all the pains I have so humbly taken to verify my notions have only wasted my time!
->
-> <cite>George Bernard Shaw</cite>
-
-The Force is strong with this one. I have you now. I find your lack of faith disturbing. Hey, Luke! May the Force be with you. She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time!
-
-Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force. Your eyes can deceive you. Don't trust them. What?! I don't know what you're talking about. I am a member of the Imperial Senate on a diplomatic mission to Alderaan--
-
-You mean it controls your actions? I have traced the Rebel spies to her. Now she is my only link to finding their secret base. Look, I can take you as far as Anchorhead. You can get a transport there to Mos Eisley or wherever you're going.
+The obtained value is then transformed into predicted probability using exp(x)/(1 + exp(x)) transformation followed by assigning cases of predicted COVID-19 for probabilities >0.5 and controls for probabilities <0.5.
