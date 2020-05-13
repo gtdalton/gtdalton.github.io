@@ -13,10 +13,12 @@ I have created this site using Jekyll which is a static site generator that sync
 I also found the following resources very useful
 1. [Jeckyl-Themes.com](https://jekyll-themes.com/) for browsing through different themes
 2. [Giraffe Academy](https://www.youtube.com/watch?v=bDQsGdCWv4I) for getting up and running with Jekyll in the first place
-3. And of course the official documentation on the Jekyll pages
+3. And of course [the official documentation on the Jekyll pages](https://jekyllrb.com/docs/)
 
 Since this is my first post, and I am experimenting, here is a quote:
 
 > A committe is an animal with four back legs
 >
 > <cite>John Le Carre</cite>
+
+Thanks for reading!
