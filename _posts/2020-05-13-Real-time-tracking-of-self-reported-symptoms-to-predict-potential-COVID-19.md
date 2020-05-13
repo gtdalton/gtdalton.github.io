@@ -2,7 +2,7 @@
 layout: post
 title:  Real-time tracking of self-reported symptoms to predict potential COVID-19
 date:   2020-05-13
-image:  symptom_tracker.png
+image:  images/symptom_tracker.png
 tags:   [Logistic Regression]
 ---
 I have been self-reporting symptoms using the COVID Symptom Study App from King's College London, so I was interested to see Tim Spector post on Twitter about a new study in Nature using machine learning to create a model combining symptoms to make predictions about probable infection.
@@ -27,4 +27,5 @@ With this threshold, a positive test has a probability of 0.69 (0.66–0.71) of 
 
 ### Discussion
 The small proportion of the overall participants who have had a test are not a random selection, but are likely to be more unwell individuals.  As such, the prevalence of infection in the untested population (even those with symptoms) is likely to be a lot lower.
+
 The model used is a very simple logistic regression model with 4 binary variables, 1 continuous variable (age) and a bias.
