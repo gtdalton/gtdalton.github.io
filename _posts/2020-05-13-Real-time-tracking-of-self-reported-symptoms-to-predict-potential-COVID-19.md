@@ -2,7 +2,7 @@
 layout: post
 title:  Real-time tracking of self-reported symptoms to predict potential COVID-19
 date:   2020-05-13
-image:  
+image:  symptom_tracker.png
 tags:   [Logistic Regression]
 ---
 I have been self-reporting symptoms using the COVID Symptom Study App from King's College London, so I was interested to see Tim Spector post on Twitter about a new study in Nature using machine learning to create a model combining symptoms to make predictions about probable infection.
